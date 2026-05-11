@@ -78,6 +78,7 @@ struct SegmentTree
     }
     Node get(int v, int l, int r, int tl, int tr)
     {
+        prop(v, l, r);
         if (tl > tr)
             return Node();
         if (tl <= l && r <= tr)
